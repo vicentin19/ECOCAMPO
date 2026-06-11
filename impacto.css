@@ -1,0 +1,482 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg: #0f172a;
+    --sidebar: #111827;
+    --card: #1e293b;
+    --text: #f8fafc;
+    --secondary: #94a3b8;
+    --primary: #10b981;
+    --primary2: #06b6d4;
+    --border: #334155;
+}
+
+body.light {
+    --bg: #f8fafc;
+    --sidebar: #ffffff;
+    --card: #ffffff;
+    --text: #111827;
+    --secondary: #6b7280;
+    --border: #e5e7eb;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ========================================
+   SIDEBAR COM GRADIENTE AZUL
+   ======================================== */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100vh;
+    background: linear-gradient(180deg, #07101b 0%, #0a1628 50%, #07101b 100%);
+    border-right: 1px solid rgba(20, 216, 167, 0.15);
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    overflow-y: auto;
+}
+
+.sidebar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--primary), var(--primary2), transparent);
+    opacity: 0.4;
+}
+
+/* Tema claro na sidebar */
+body.light .sidebar {
+    background: linear-gradient(180deg, #ffffff 0%, #e8edf5 50%, #ffffff 100%);
+}
+
+body.light .sidebar::after {
+    opacity: 0.3;
+}
+
+/* ========================================
+   LOGO - TAMANHO CORRETO
+   ======================================== */
+
+.logo {
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.logo h2 {
+    color: var(--primary);
+    font-size: 22px;
+    margin: 0;
+}
+
+.logo span {
+    color: var(--secondary);
+    font-size: 12px;
+}
+
+/* ========================================
+   MENU
+   ======================================== */
+
+.menu-title {
+    padding: 15px 25px;
+    color: var(--secondary);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 10px;
+}
+
+.sidebar nav a {
+    text-decoration: none;
+    color: var(--text);
+    padding: 14px 16px;
+    border-radius: 12px;
+    transition: .25s;
+    font-size: 14px;
+}
+
+.sidebar nav a:hover {
+    background: rgba(16, 185, 129, .1);
+    transform: translateX(5px);
+}
+
+.sidebar nav a.active {
+    background: linear-gradient(90deg, var(--primary), var(--primary2));
+    color: white;
+}
+
+/* ========================================
+   BOTAO TEMA
+   ======================================== */
+
+#themeBtn {
+    margin: auto 15px 20px;
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    background: var(--card);
+    color: var(--text);
+    transition: .3s;
+    font-size: 14px;
+}
+
+#themeBtn:hover {
+    transform: scale(1.02);
+    background: var(--primary);
+    color: white;
+}
+
+/* ========================================
+   CONTEUDO PRINCIPAL
+   ======================================== */
+
+.content {
+    margin-left: 240px;
+    min-height: 100vh;
+    padding: 0 25px 100px;
+}
+
+.breadcrumb {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    border-bottom: 1px solid var(--border);
+    color: var(--secondary);
+}
+
+.breadcrumb strong {
+    color: var(--primary);
+}
+
+/* HERO */
+.impact-hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: rgba(16, 185, 129, .12);
+    color: var(--primary);
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.impact-hero h1 {
+    font-size: 72px;
+    margin-bottom: 10px;
+}
+
+.impact-hero h1 span {
+    background: linear-gradient(90deg, var(--primary), var(--primary2));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.impact-hero p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.8;
+    color: var(--secondary);
+    font-size: 18px;
+}
+
+/* GRID DOS CARDS */
+.impact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 50px 0;
+}
+
+.impact-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 25px;
+    min-width: 180px;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.impact-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 25px rgba(16, 185, 129, .20);
+}
+
+.impact-card:hover h2 {
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+.icon-box {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.impact-card h2 {
+    font-size: 32px;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.impact-card p {
+    color: var(--secondary);
+    font-size: 14px;
+}
+
+.line {
+    width: 50px;
+    height: 3px;
+    background: var(--primary);
+    margin: 15px auto 0;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.impact-card:hover .line {
+    width: 80px;
+}
+
+/* SEÇÃO INFORMATIVA */
+.impact-info {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.impact-info h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.impact-info p {
+    color: var(--secondary);
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* SIMULADOR */
+.simulator-section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.simulator-section h2 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.simulator-section p {
+    color: var(--secondary);
+    margin-bottom: 30px;
+}
+
+.simulator-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.simulator-buttons button {
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.simulator-buttons button:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-3px);
+}
+
+#resultadoImpacto {
+    background: var(--bg);
+    border-radius: 15px;
+    padding: 20px;
+    color: var(--text);
+    border: 1px solid var(--border);
+    transition: .3s;
+    line-height: 1.6;
+}
+
+/* ========================================
+   RODAPÉ
+   ======================================== */
+
+footer {
+    margin-left: 240px;
+    height: 70px;
+    border-top: 1px solid var(--border);
+    background: var(--sidebar);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-text {
+    color: var(--secondary);
+    font-size: 14px;
+}
+
+#topBtn {
+    position: absolute;
+    right: 30px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(90deg, var(--primary), var(--primary2));
+    transition: .3s;
+    font-size: 20px;
+}
+
+#topBtn:hover {
+    transform: translateY(-3px) scale(1.08);
+}
+
+/* ========================================
+   ANIMAÇÕES
+   ======================================== */
+
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: .6s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========================================
+   SCROLLBAR PERSONALIZADA
+   ======================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--sidebar);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--primary), var(--primary2));
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+/* ========================================
+   RESPONSIVIDADE
+   ======================================== */
+
+@media (max-width: 900px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    
+    .content {
+        margin-left: 0;
+    }
+    
+    footer {
+        margin-left: 0;
+    }
+    
+    .impact-hero h1 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 600px) {
+    .impact-hero h1 {
+        font-size: 36px;
+    }
+    
+    .impact-hero p {
+        font-size: 16px;
+    }
+    
+    .impact-card {
+        min-width: 140px;
+        padding: 15px;
+    }
+    
+    .impact-card h2 {
+        font-size: 28px;
+    }
+    
+    .simulator-buttons button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}

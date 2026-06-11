@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCampo 2026 | Calculadora de Água</title>
+    <link rel="stylesheet" href="agua.css">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo EcoCampo" class="logo-img">
+            <div>
+                <h2>EcoCampo</h2>
+                <span>2026</span>
+            </div>
+        </div>
+        <div class="menu-title">SEÇÕES</div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="impacto.html">Impacto</a>
+            <a href="agricultura.html">Agricultura</a>
+            <a class="active" href="agua.html">Água</a>
+            <a href="energia.html">Energia</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="jogos.html">Jogos</a>
+        </nav>
+        <button id="themeBtn">Modo Claro</button>
+    </aside>
+
+    <main class="content">
+        <div class="breadcrumb">
+            EcoCampo > <strong>Calculadora de Consumo de Água</strong>
+        </div>
+
+        <section class="hero">
+            <div class="tag">Calculadora de Consumo de Água</div>
+            <h1>Descubra seu <span>Consumo</span></h1>
+            <p>Responda as perguntas abaixo e descubra quantos litros de água sua família consome por mês.</p>
+        </section>
+
+        <section class="calculator-section">
+            <div class="calculator-card">
+                <h2>Informações da sua Casa</h2>
+                
+                <div class="form-group">
+                    <label>Quantas pessoas moram na casa?</label>
+                    <div class="slider-container">
+                        <input type="range" id="pessoas" min="1" max="15" value="4" step="1">
+                        <span id="pessoasValor" class="valor-display">4 pessoas</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Tempo médio de banho (minutos por pessoa)</label>
+                    <div class="slider-container">
+                        <input type="range" id="banho" min="1" max="30" value="10" step="1">
+                        <span id="banhoValor" class="valor-display">10 minutos</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Lavagens de roupa por semana</label>
+                    <div class="slider-container">
+                        <input type="range" id="roupa" min="0" max="14" value="3" step="1">
+                        <span id="roupaValor" class="valor-display">3 vezes</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Uso de mangueira (minutos por dia)</label>
+                    <div class="slider-container">
+                        <input type="range" id="mangueira" min="0" max="120" value="20" step="5">
+                        <span id="mangueiraValor" class="valor-display">20 min/dia</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Você tem jardim, horta ou área para regar?</label>
+                    <select id="jardim">
+                        <option value="0">Não tenho jardim ou horta</option>
+                        <option value="1">Horta pequena ou vasos</option>
+                        <option value="2">Jardim médio (quintal)</option>
+                        <option value="3">Jardim grande (lote)</option>
+                        <option value="4">Chácara ou sítio pequeno</option>
+                        <option value="5">Propriedade rural</option>
+                    </select>
+                </div>
+
+                <div id="resultado" class="resultado">
+                    <h3>Seu Consumo Mensal</h3>
+                    <div class="consumo-numero">
+                        <span id="consumoTotal">0</span>
+                        <span class="unidade">litros/mês</span>
+                    </div>
+                    <div class="barra-consumo">
+                        <div id="barra" class="barra"></div>
+                    </div>
+                    <p id="mensagem" class="mensagem"></p>
+                </div>
+            </div>
+
+            <div class="dicas-card">
+                <h3>Dicas para Economizar Água</h3>
+                <ul>
+                    <li>Banhos rápidos economizam até 90 litros por dia</li>
+                    <li>Feche a torneira ao escovar os dentes</li>
+                    <li>Conserte vazamentos - uma torneira gotejando desperdiça 45 litros/dia</li>
+                    <li>Reaproveite água da chuva para regar plantas</li>
+                    <li>Lave roupa e louça com máquinas cheias</li>
+                    <li>Use vassoura em vez de mangueira para limpar calçadas</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-text">Tecnologia e Sustentabilidade no Campo</div>
+        <button id="topBtn">↑</button>
+    </footer>
+
+    <script src="agua.js"></script>
+</body>
+
+</html>

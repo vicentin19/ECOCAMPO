@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCampo 2026 | Jogos Educativos</title>
+    <link rel="stylesheet" href="jogos.css">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo EcoCampo" class="logo-img">
+            <div>
+                <h2>EcoCampo</h2>
+                <span>2026</span>
+            </div>
+        </div>
+        <div class="menu-title">SEÇÕES</div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="impacto.html">Impacto</a>
+            <a href="agricultura.html">Agricultura</a>
+            <a href="agua.html">Água</a>
+            <a href="energia.html">Energia</a>
+            <a href="quiz.html">Quiz</a>
+            <a class="active" href="jogos.html">Jogos</a>
+        </nav>
+        <button id="themeBtn">☀️ Modo Claro</button>
+    </aside>
+
+    <main class="content">
+        <div class="breadcrumb">
+            EcoCampo > <strong>Jogos</strong>
+        </div>
+
+        <section class="jogos-section">
+            <div class="jogos-header">
+                <span class="tag">🎮 Central de Jogos</span>
+                <h1>Aprenda <span>Brincando</span></h1>
+                <p>Três jogos educativos para testar e expandir seu conhecimento sobre sustentabilidade.</p>
+            </div>
+
+            <div class="jogos-container" id="jogosContainer"></div>
+
+            <div class="jogo-area" id="jogoArea" style="display: none;">
+                <button class="voltar-btn" id="voltarBtn">← Voltar para Central de Jogos</button>
+                <div class="jogo-card" id="jogoCard"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-text">🌿 Tecnologia e Sustentabilidade no Campo</div>
+        <button id="topBtn">↑</button>
+    </footer>
+
+<script src="../global.js"></script>
+<script src="jogos.js"></script>
+
+
+</body>
+
+</html>

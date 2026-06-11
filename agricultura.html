@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCampo 2026 | Agricultura Sustentável</title>
+    <link rel="stylesheet" href="agricultura.css">
+</head>
+
+<body>
+<aside class="sidebar">
+    <div class="logo">
+        <img src="img/logo.png" alt="Logo EcoCampo" class="logo-img">
+        <div>
+            <h2>EcoCampo</h2>
+            <span>2026</span>
+        </div>
+    </div>
+    <div class="menu-title">SEÇÕES</div>
+    <nav>
+            <a href="index.html">Início</a>
+        <a href="impacto.html">Impacto</a>
+        <a class="active" href="agricultura.html">Agricultura</a>
+        <a href="agua.html">Água</a>
+        <a href="energia.html">Energia</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="jogos.html">Jogos</a>
+    </nav>
+    <button id="themeBtn">Modo Claro</button>
+</aside>
+
+<main class="content">
+        <div class="breadcrumb">
+            EcoCampo > <strong>Agricultura Sustentável</strong>
+        </div>
+
+        <section class="hero">
+            <div class="tag"> Práticas que Transformam o Campo</div>
+            <h1>Agricultura <span>Sustentável</span></h1>
+            <p>Clique em qualquer card para aprender mais sobre cada prática sustentável.</p>
+        </section>
+
+        <div class="cards-grid">
+            <!-- Card 1 - Conservação do Solo -->
+            <div class="info-card" data-pratica="solo">
+                <div class="card-icon"></div>
+                <h3>Conservação do Solo</h3>
+                <p>Práticas para manter o solo fértil e produtivo por gerações.</p>
+                <button class="saiba-mais" onclick="abrirModal('solo')">Saiba mais →</button>
+            </div>
+
+            <!-- Card 2 - Controle Biológico -->
+            <div class="info-card" data-pratica="biologico">
+                <div class="card-icon"></div>
+                <h3>Controle Biológico</h3>
+                <p>Usar a natureza para controlar pragas sem veneno.</p>
+                <button class="saiba-mais" onclick="abrirModal('biologico')">Saiba mais →</button>
+            </div>
+
+            <!-- Card 3 - Agricultura Regenerativa -->
+            <div class="info-card" data-pratica="regenerativa">
+                <h3>Agricultura Regenerativa</h3>
+                <p>Restaurar os ecossistemas enquanto produz alimentos.</p>
+                <button class="saiba-mais" onclick="abrirModal('regenerativa')">Saiba mais →</button>
+            </div>
+
+            <!-- Card 4 - Preservação de Nascentes -->
+            <div class="info-card" data-pratica="nascentes">
+                <h3>Preservação de Nascentes</h3>
+                <p>Proteger as fontes de água é proteger a vida.</p>
+                <button class="saiba-mais" onclick="abrirModal('nascentes')">Saiba mais →</button>
+            </div>
+
+            <!-- Card 5 - Compostagem -->
+            <div class="info-card" data-pratica="compostagem">
+                <h3>Compostagem</h3>
+                <p>Transformar resíduos orgânicos em adubo rico e natural.</p>
+                <button class="saiba-mais" onclick="abrirModal('compostagem')">Saiba mais →</button>
+            </div>
+
+            <!-- Card 6 - Agroflorestas -->
+            <div class="info-card" data-pratica="agroflorestas">
+                <h3>Agroflorestas</h3>
+                <p>Integrar árvores com agricultura para maior produtividade.</p>
+                <button class="saiba-mais" onclick="abrirModal('agroflorestas')">Saiba mais →</button>
+            </div>
+
+            <!-- Card 7 - Rotação de Culturas -->
+            <div class="info-card" data-pratica="rotacao">
+                <h3>Rotação de Culturas</h3>
+                <p>Alternar cultivos para manter o solo saudável.</p>
+                <button class="saiba-mais" onclick="abrirModal('rotacao')">Saiba mais →</button>
+            </div>
+
+            <!-- Card 8 - Redução de Desperdício -->
+            <div class="info-card" data-pratica="desperdicio">
+                <div class="card-icon">📉</div>
+                <h3>Redução de Desperdício</h3>
+                <p>Menos desperdício, mais sustentabilidade.</p>
+                <button class="saiba-mais" onclick="abrirModal('desperdicio')">Saiba mais →</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <div id="modal-conteudo"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-text"> Tecnologia e Sustentabilidade no Campo</div>
+        <button id="topBtn">↑</button>
+    </footer>
+
+    <script src="agricultura.js"></script>
+</body>
+
+</html>

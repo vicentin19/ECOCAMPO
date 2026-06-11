@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCampo 2026 | Impacto Ambiental</title>
+    <link rel="stylesheet" href="impacto.css">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo EcoCampo" class="logo-img">
+            <div>
+                <h2>EcoCampo</h2>
+                <span>2026</span>
+            </div>
+        </div>
+        <div class="menu-title">SEÇÕES</div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a class="active" href="impacto.html">Impacto</a>
+            <a href="agricultura.html">Agricultura</a>
+            <a href="agua.html">Água</a>
+            <a href="energia.html">Energia</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="jogos.html">Jogos</a>
+        </nav>
+        <button id="themeBtn">Modo Claro</button>
+    </aside>
+
+    <main class="content">
+        <div class="breadcrumb">
+            EcoCampo > <strong>Impacto Ambiental</strong>
+        </div>
+
+        <section class="impact-hero">
+            <div class="tag">Impacto Real</div>
+            <h1>Dashboard de <span>Impacto Ambiental</span></h1>
+            <p>Acompanhe indicadores que demonstram como ações sustentáveis podem gerar benefícios reais para o meio ambiente e para a sociedade.</p>
+        </section>
+
+        <div class="impact-grid">
+            <div class="impact-card">
+                <div class="icon-box">💧</div>
+                <h2 data-counter="2800000">0</h2>
+                <p>Litros de Água Economizados</p>
+                <div class="line"></div>
+            </div>
+
+            <div class="impact-card">
+                <div class="icon-box">🌳</div>
+                <h2 data-counter="124500">0</h2>
+                <p>Árvores Preservadas</p>
+                <div class="line"></div>
+            </div>
+
+            <div class="impact-card">
+                <div class="icon-box">♻️</div>
+                <h2 data-counter="890000">0</h2>
+                <p>Toneladas Recicladas</p>
+                <div class="line"></div>
+            </div>
+
+            <div class="impact-card">
+                <div class="icon-box">⚡</div>
+                <h2 data-counter="340000">0</h2>
+                <p>kWh de Energia Limpa</p>
+                <div class="line"></div>
+            </div>
+
+            <div class="impact-card">
+                <div class="icon-box">👥</div>
+                <h2 data-counter="75000">0</h2>
+                <p>Participantes Ativos</p>
+                <div class="line"></div>
+            </div>
+        </div>
+
+        <section class="impact-info">
+            <h2>O que esses números representam?</h2>
+            <p>Cada indicador demonstra os resultados obtidos por meio de práticas sustentáveis. A economia de água reduz desperdícios, a preservação das árvores contribui para o equilíbrio climático, a reciclagem diminui a geração de resíduos e a energia limpa reduz a emissão de gases poluentes.</p>
+        </section>
+
+        <section class="simulator-section">
+            <h2>Simule seu Impacto</h2>
+            <p>Escolha uma ação sustentável e descubra os benefícios que ela pode gerar.</p>
+            <div class="simulator-buttons">
+                <button onclick="mostrarImpacto('agua')">💧 Economia de Água</button>
+                <button onclick="mostrarImpacto('energia')">⚡ Energia Solar</button>
+                <button onclick="mostrarImpacto('reciclagem')">♻️ Reciclagem</button>
+                <button onclick="mostrarImpacto('arvores')">🌳 Reflorestamento</button>
+            </div>
+            <div id="resultadoImpacto">
+                 Clique em uma ação acima para saber mais sobre seu impacto ambiental!
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-text">Tecnologia e Sustentabilidade no Campo</div>
+        <button id="topBtn">↑</button>
+    </footer>
+
+    <script src="impacto.js"></script>
+</body>
+
+</html>
