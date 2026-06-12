@@ -145,4 +145,4 @@ O **EcoCampo 2026** combina educação, tecnologia e sustentabilidade em uma ún
 
 ---
 
-** EcoCampo 2026 — Cultivando conhecimento para um futuro sustentável.**
+EcoCampo 2026 — Cultivando conhecimento para um futuro sustentável.
